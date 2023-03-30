@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>You can now upload the folder</h1>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="directory">Upload Directory:</label>
+        <input type="file" id="directory" name="directory" webkitdirectory directory multiple>
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>
+</div>
+{% endblock %}
